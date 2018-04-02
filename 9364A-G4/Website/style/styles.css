@@ -1,0 +1,59 @@
+body {
+    background-image: url("../images/image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+}
+
+#lefthead {
+    width: 50%;
+}
+#righthead {
+    width: 50%;
+    float: right;
+}
+
+header a{
+}
+footer {
+    height: 20%;
+    width: 100%;
+    background-color: fuchsia;    
+}
+h1 {
+    color:  black;
+}
+h2 {
+    
+}
+ul p {
+    
+}
+ul li {
+    
+}
+ul ol li {
+    
+}
+ul ol ul {
+    
+} 
+ul ol ul li {
+    
+}
+ul ol ul p {
+    
+}
+ul ul li {
+    
+}
+ul ul ul li {
+    
+}
+ul ul ul ol li {
+    
+}
