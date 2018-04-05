@@ -1,8 +1,29 @@
+html {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;     
+}
+#blur{
+    background-image: url("../images/image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;    
+    filter: blur(2px);
+    position: absolute;
+}
+#main{
+    
+}
 body {
     background-image: url("../images/image.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 header {
@@ -20,7 +41,12 @@ header {
 
 header a{
     text-decoration: none;
+    color: white;
     padding: 20px;
+}
+header a:hover{
+    text-decoration: underline;
+    color: grey;
 }
 footer {
     height: 20%;
