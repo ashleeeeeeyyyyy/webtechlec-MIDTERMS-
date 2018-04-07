@@ -4,22 +4,36 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;     
 }
-#blur{
-    background-image: url("../images/image.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;    
-    filter: blur(2px);
-    position: absolute;
-}
 #main{
-    
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-position: center;
+
+}
+#opac{
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+}
+#opachead{
+    height: 100px;
+    width: 100%;
+    opacity: 0.6;
+    background-color: aquamarine;
+    position: absolute;
+    z-index: -1;
 }
 body {
     background-image: url("../images/image.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    height: 100%;
+    width: 100%;
 }
 pre {
   font-family: monospace, monospace;
@@ -33,6 +47,7 @@ header {
 
 #lefthead {
     width: 50%;
+    padding: 5px;
 }
 #righthead {
     width: 50%;
@@ -41,7 +56,7 @@ header {
 
 header a{
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 20px;
 }
 header a:hover{
