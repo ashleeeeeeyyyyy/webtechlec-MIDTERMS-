@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,27 +29,108 @@
         <ul>
             <li>Selectors</li>
             <li>Selector Syntax</li>
+            <ol> 
+                <li>Sequence of simple selectors separated by combinators. </li>
+            </ol>
             <li>Simple Selectors</li>
             <ul>
                 <li>Universal Selectors</li>
+                <ol> 
+                    <li> This selector selects any type of an element in an HTML page. It can only match a single element per selector. </li>
+                </ol>
+                <pre> *{
+                color: yellow; 
+                background: black; /* every element must have a black background */
+                }</pre>
                 <li>ID Selectors</li>
+                    <ol>
+                        <li>The ID selector is used to style a specific unique element. This selector uses the attribute of the HTML element. It is also defined with the hash character ("#") </li>
+                    </ol>
+                <pre> 
+                #initial{
+                
+                    background-color: grey; /* every element with the id "initial" must have a grey background*/
+                    border: green 2px; /*all elements with the selector must have a green border with 2px padding*/
+                    
+                }
+                
+                </pre>
                 <li>Class Selectors</li>
+                    <ol>
+                        <li> This selector is used to style a group of elements. This is defined with a period (".")</li>
+                </ol>
+                <pre>
+                .middle{
+                    text-align: center; /*All elements or group of element with the class selector "middle" must have its text aligned to the center. */
+                    background-color: pink; /*All elements must have a pink background. */
+                }
+                </pre>
                 <li>Attribute Selectors</li>
+                    <ol>
+                        <li> This selector is used to select elements with a specific attribute.</li>
+                </ol>
+                <pre>
+                    a[target] { /*This is a regular attribute selector. */
+                        color: skyblue;
+                    }
+                    
+                    a[target=_blank] { /* This is an attribute selector with a value. */
+                        color: skyblue
+                    }
+                    
+                    [title~="flower"] {  /*This type of attribute selector selects elements with an attribute which contains a certain word*/
+                        border: 4px solid green;
+                    }
+                
+                </pre>
                 <li>Type Selectors</li>
+                    <ol>
+                        <li> This selector matches elements by the node name it is given. </li>
+                </ol>
+                <pre> 
+                
+                p{ /* All paragraph &lt;p&gt; elements must follow the following styles */
+                    color:green;
+                }
+                </pre>
+                
                 <li>Combinators</li>
+                <ol>
+                    <li> A combinator explains a relationship between selectors. </li>
+                </ol>
                 <ul>
-                    <li>provide additional confition</li>
-                    <li>used to impose additional matching constrains following</li>
+                    <li>provides additional confition</li>
+                    <li>used to impose additional matching constrains following: </li>
                     <li>[space] descendant combinators</li>
+                        <pre> 
+                            div p { /*This is matches all elements which are descendants of a specific element*/
+                            background-color: green;
+                            }
+                            
+                        </pre>
                     <li>Child combinators (>)</li>
+                        <pre>
+                            div > p { /* This selector selects all elements which are the immediate children of a specific element */
+                            background-color: green;
+                            }
+                        </pre>
                     <li>Sibling combinator</li>
                     <ol>
                         <li>Adjacent Sibling Combinator (+)</li>
+                            <pre>
+                                div + p { /*This sibling selector selects all elements that are adjacent siblings of a specific element. */
+                                background-color:green;
+                                }
+                            </pre>
                         <li>General Sibling combinator (~)</li>
+                            <pre>
+                                div ~ p { /*This selects all elements that are siblings of  specific element.*/
+                                background-color: green;
+                                }
+                            </pre>
                     </ol>
                 </ul>
             </ul>
         </ul>
 
     </body>
-</html>
