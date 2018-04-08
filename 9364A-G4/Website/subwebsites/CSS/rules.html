@@ -29,6 +29,23 @@
             <li>By Specify</li>
             <li>By Order</li>
         </ul>
+        <ul>
+            <li> Regular Rules - These rules follow regular syntax</li>
+                <ul>
+                    <li>@charset - This defines the character set which is used by the web browser. This is very useful when the stylesheet contains non-ASCII characters.</li>
+                    <li>@import - This rule is placed at the very beggining of the css file which instructs the stylesheet to include an external CSS files as if the requested file's content were right there. </li>
+                    <li>@namespace - This is used particularly for applying CSS to XHTML so that the XHTML elements can possibly be used as selectors in the actual CSS file</li>
+            </ul>
+            <li> Nested Rules- This contains subsets of additional statements</li>
+                <ul>
+                    <li> @document - This is used for specific conditions of styles which apply to a specified page. (e.g. Providing a URL then customizing styles only for the specified page.)</li>
+                    <li> @font-face - This allows the user to use custom fonts for a webpage. Although some fonts may not be supported by other browsers, this rule will still accept the statements which create the custom fonts..</li> 
+                    <li> @keyframes - This rule serves as the basis for keyframe animations, which allow the web developers to mark the start and stop time for the animations. </li>
+                    <li> @media - This contains plenty of additional statements for specifying styles to a specific screen. </li>
+                    <li> @page - This defines styles used by individual pages when the document is being printed. Specifically, it contains pseudo-elements fo styling the very first page as well as the left and right margins of the page.</li>
+                    <li> @supports - This test if the browser can support a certain feature, which then applies the stle for those elements if it is supported.</li>
+            </ul>
+        </ul>
         <footer>
         </footer>    
 
