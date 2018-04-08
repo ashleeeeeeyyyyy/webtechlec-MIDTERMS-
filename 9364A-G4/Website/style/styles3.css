@@ -1,0 +1,11 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-image: url("../images/image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
