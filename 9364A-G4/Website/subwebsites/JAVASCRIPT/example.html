@@ -10,351 +10,345 @@
 </head>
 
 <body>
-    <h2>Simple Selectors</h2>
-    <h3>Universal Selectors</h3>
-    Style.css
-    <div class="style-container">
-        <pre>*{ padding: 0;
-    margin: 0; 
-    }</pre>
-        <pre>nav ul li{
-    text-align: center;
-    float: right;
-    margin: 20px;
-    list-style: none;
-    }
-    </pre>
-    </div>
+    <!-- JAVASCRIPT -->
+    <h1>Javascript</h1>
 
-
-    <h3>ID Selectors</h3>
-        #banner{ } #main{ }
-
-    <h3>Class Selectors</h3>
-
-    <h3>Attribute Selectors</h3>
-
-
-    <h3>Type Selectors</h3>
-
-
-    <h2>Pseudo combinators</h2>
-    <h3>Descendant combinators</h3>
-
-    <h3>Child combinators</h3>
-
-    <h3>Sibling combinators</h3>
+    <!-- Example Codes -->
+    <h3>Variables and Constances</h3>
     <ul>
-        <li>Adjacent sibling combinator</li>
-        <li>General sibling combinator</li>
+        <li>var</li>
+        <li>let</li>
+        <li>const</li>
     </ul>
 
-    <h2>Pseudo Classes</h2>
-    <h3>Structural Pseudo-Classes</h3>
-    index.html
-        <pre>
-                &lt;table&gt;
-                    &lt;tr&gt;
-                        &lt;th colspan="5"&gt;Structural Pseudo Classes&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                            &lt;td&gt;webtech&lt;/td&gt;
-                        &lt;/tr&gt;
-                &lt;/table&gt;
-        </pre>
-    <ul>
-        <li>:nth-child()</li>
-        style.css
-        <pre>
-    tr td:nth-child(2n){
-        background: yellow;
-    }
-    tr td:nth-child(odd){
-        background: blue;
-    }  
-        </pre>
-        <img src="./images/nth-child.PNG">
-
-        <li>:root</li>
-        <pre>
-
-        </pre>
-        <li>:nth-last-child</li>
+    <h3>Primitive Data Types</h3>
+    <ol>
+        <li>Numbers</li>
         <ul>
-            <li>:nth-last-child(odd) represents all odd number counting from the last one</li>
-            <li>:nth-last-child(-n+2) represents the last two elements</li>
-        </ul>
-        Style.css
-        <pre>
-    tr td:nth-last-child(-n+2){
-        background: pink;
-    }
-        </pre>
-        <img src="./images/nth-last-child.PNG">
-        <li>:nth-of-type</li>
-        <pre>
-    tr td:nth-of-type(3){
-        background: blue;
-    } 
-        </pre>
-        <img src="./images/nth-of-type.PNG">
-        <li>:nth-last-of-type</li>
-
-        <li>:first-child</li>
-        <ul>
-            <li>Same as :nth-child(1)</li>
-        </ul>
-        <li>:last-child</li>
-        <ul>
-            <li>Same as :nth-last-child(1)</li>
-        </ul>
-        <li>:first-of-type</li>
-        <ul>
-            <li>Same as nth-of-type(1)</li>
-        </ul>
-        <li>:last-of-type</li>
-        <ul>
-            <li>Same as :nth-last-of-type(1)</li>
-        </ul>
-        <li>:only-child</li>
-        <ul>
-            <li>Same as :first-child,:last-child or :nth-child(1),:nth-last-child(1) but with lower specificity
-            </li>
-        </ul>
-        index.html
-        <pre>
-    &lt;p&gt;First paragraph inside the div&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Second&lt;/b&gt; paragraph&lt;/p&gt;
-    &lt;p&gt;&lt;b&gt;Bold para&lt;/b&gt;graph paragraph&lt;/p&gt;
-        </pre> style.css
-        <pre>
-    b:only-child{
-        background:green;
-    }
-        </pre>
-        <img src="./images/only-child.PNG">
-        <li>:only-of-type</li>
-        <ul>
-            <li>Same as :first-of-type,:last-of-type or :nth-of-type(1),:nth-last-of-type(1) but with lower specificity
-            </li>
-        </ul>
-        <li>:empty</li>
-    </ul>
-    <h3>Negation Pseudo-Classes </h3>
-    <ul>
-        <li>:not</li>
-        index.html
-        <pre>
-    &lt;h1&gt;Hello World&lt;/h1&gt;
-    &lt;p&gt;This paragraph doesn't contain the hello id&lt;/p&gt;
-    &lt;p id = "Hello"&gt;This paragraph contains the hello id&lt;/p&gt;
-    &lt;p&gt;This paragraph doesn't contain the hello id&lt;/p&gt;
-        </pre> style.css
-        <pre>
-    p:not(#Hello){
-        background:blue;
-    }
-        </pre>
-        <img src="./images/not.PNG">
-    </ul>
-    <h3>Dynamic Pseudo-Classes</h3>
-    <ul>
-        <li>Link Pseudo-Classes</li>
-        <ul>
-            index.html
-            <pre>
-    &lt;a&gt; href = "https://i.slu.edu.ph/">SLU Portal&lt;/a&gt;
-            </pre>
-            <li>:link</li>
+            <li>Decimal Notation</li>
             <ul>
-                <li>Works on links that are not yet visited</li>
+                <li>Decimal Integer - var decimalInteger = 10;</li>
+                <li>Decimal Float - var decimalFloat = 0.10;</li>
+                <li>Scientific Notation - var scientificNotation = 10.033e21;</li>
             </ul>
-            style.css
-            <pre>
-    a:link{
-        color: violet;
-    }
-            </pre>
-            <img src="./images/link.PNG">
-            <li>:visited</li>
+            <li>Numbers in base 2(binary), base 8(octal) and base 16(hexadecimal)</li>
             <ul>
-                <li>Works on links that are already visited.</li>
-            </ul>
-            style.css
-            <pre>
-    a:visited{
-        color: brown;
-    }
-            </pre>
-            <img src="./images/visited.PNG" </ul>
-            <li>User Action Pseudo-Classes</li>
-            <ul>
-                <li>:hover</li>
+                <li>Binary - var binaryNo = 0b1101;</li>
                 <ul>
-                    <li>Works when the user's cursor is pointed to the element.</li>
+                    <li>Output: 13</li>
                 </ul>
-                index.html
-                <pre>
-    &lt;a&gt; href = "https://i.slu.edu.ph/">SLU Portal&lt;/a&gt;     &lt;a&gt; href = "https://www.google.com/">Google&lt;/a&gt;
-            </pre> style.css
-                <pre>
-    a:hover{
-        background: yellow;
-    }
-             </pre>
-                <img src="./images/hover.png">
-                <li>:active</li>
-                index.html
-                <pre>
-    &lt;a&gt; href = "example.html">Example&lt;/a&gt;     &lt;a&gt; href = "https://www.google.com/">Google&lt;/a&gt;
-            </pre> style.css
-                <pre>
-    a:active{
-        background: pink;
-    }
-            </pre>
-                <img src="./images/active.PNG">
-                <li>:focus</li>
+                <li>Octal - var octalNo = 0o456;</li>
                 <ul>
-                    <li>This is usually use in forms</li>
+                    <li>Output: 302</li>
                 </ul>
-                index.html
-                <pre>
-    &lt;form&gt;
-        Name: &lt;input type = "text"&gt;&lt;br&gt;
-        Course: &lt;input type = "text"&gt;
-    &lt;/form&gt;
-            </pre>
-            Style.css 
-            <pre>
-    input:focus{
-        background:green;
-    }
-            </pre>
-            <img src = "./images/focus.PNG">
+                <li>Hexadecimal - var hexadecimalNo = 0xABC;</li>
+                <ul>
+                    <li>Output: 2748</li>
+                </ul>
             </ul>
-        </ul>
-
-        <h3>Target Pseudo-Classes</h3>
-        <ul>
-            <li>:target</li>
-        </ul>
-
-        <h3>Language Pseudo-Classes</h3>
-        <ul>
-            <li>:lang</li>
-            index.html 
-            <pre>
-    &lt;p lang = "en"&gt;The language is english&lt;/p&gt;
-    &lt;p&gt;Ito ay hindi english&lt;/p&gt;
-            </pre>
-            style.css 
-            <pre>
-    :lang(en){
-        background: black;
-        color: white;
-    }    
-            </pre>
-            <img src = "./images/lang.PNG">
-        </ul>
-
-        <h3>UI element states Pseudo-Classes</h3>
-        <ul>
-            <li>:enabled</li>
+            <li>Special Numbers</li>
             <ul>
-                <li>Mostly used in forms</li>
-            index.html
-            <pre>
-    &lt;form&gt;
-        Name: &lt;input type = "text"&gt;&lt;br&gt;
-        Course: &lt;input type = "text" disabled = "disabled"&gt;
-    &lt;/form&gt;
-            </pre>
-            style.css 
-            <pre>
-    input:enabled{
-        background: gray;
-    }
-            </pre>
-            <img src = "./images/enabled.PNG">
+                <li>Positive Infinity - var positiveInfinity = 10/0; or any number that exceed the highest positive integer</li>
+                <ul>
+                    <li>Output: Infinity</li>
+                </ul>
+                <li>Negative Infinity - var negativeInfinity = -10/0; or any number that exceed the lowest negative integer</li>
+                <ul>
+                    <li>Output: -Infinity</li>
+                </ul>
+                <li>Not a number or NaN - var notANumber = 0/0;</li>
+                <ul>
+                    <li>Output: NaN</li>
+                </ul>
             </ul>
-            <li>:disabled</li>
-            index.html
-            <pre>
-    &lt;form&gt;
-        Name: &lt;input type = "text"&gt;&lt;br&gt;
-        Course: &lt;input type = "text" disabled = "disabled"&gt;
-    &lt;/form&gt;
-            </pre>
-            style.css 
-            <pre>
-    input:disabled{
-        background: black;
-    }
-            </pre>
-            <img src = "./images/disabled.PNG">
-            <li>:checked</li>
-            index.html 
-            <pre>
-    &lt;form&gt;
-        &lt;input type = "checkbox" value = "a"&gt;
-        &lt;label&gt;Webtech&lt;/label&gt;
-        &lt;input type = "checkbox" value = "b"&gt;
-        &lt;label&gt;Practicum 1&lt;/label&gt;
-        &lt;input type = "checkbox" value = "c"&gt;
-        &lt;label&gt;Networks&lt;/label&gt;
-    &lt;/form>
-            </pre>
-            style.css 
-            <pre>
-    input:checked + label{
-        background: yellow;
-    }
-            </pre>
-            <img src = "./images/checked.PNG">
+            <li>Strings</li>
+            <ul>
+                <li>Single-quote delimited - var singleQuote = 'Webtech 2018';</li>
+                <ul>
+                    <li>Output: Webtech 2018</li>
+                </ul>
+                <li>Double-quote delimited - var doubleQuote = "2nd Semester";</li>
+                <ul>
+                    <li>Output: 2nd Semester</li>
+                </ul>
+                <li>Template literals - var combinedString = `${singleQuote} ${dept} Saint Louis University`;</li>
+                <ul>
+                    <li>Output: "Webtech 2018 IT/CS Saint Louis University"</li>
+                </ul>
+            </ul>
+            <li>Boolean</li>
+            <ul>
+                <li>These are the false values: 0, '', false, null, undefined and NaN</li>
+                Javascript File:
+                <pre>
+        if (0 || '' || null || false || undefined || NaN) {
+            console.log(true);
+        } else {
+            console.log(false);
+        }
+</pre> Output: False
+            </ul>
         </ul>
-        <h3>Pseudo-elements</h3>
+        <li>Object Types</li>
         <ul>
-            <li>:first - letter, ::first-letter</li>
-            <li>:first-line, ::first-line</li>
-            <li>:before, ::before</li>
-            <li>:after, ::after</li>
+            <li>Primitive Types (String, Number, Boolean)</li>
+            <ul>
+                <li>String - var primString = new String('Hello World');</li>
+                <li>Number - var primNumber = new Number(50);</li>
+                <li>Boolean - var primBoolean = new Boolean(true);</li>
+            </ul>
+            Javascript File:
+            <pre>
+        var a = 1, b = new Number(5);
+        console.log("a = "+typeof a);
+        console.log("b = "+typeof b);
+</pre> Output: a = number, b = object
+            <li>Date Object (dates and times)</li>
+            <ul>
+                <li>Current date and time - var currentDate = new Date()</li>
+                <li>April 9, 2018, 12:00 MN - var passingDate = new Date(2018, 3, 9)</li>
+            </ul>
+            Javascript File:
+            <pre>
+    var currentDate = new Date();
+    console.log("Day: "+currentDate.getDate() + " Month: "+ currentDate.getMonth() + " Year: "+currentDate.getUTCFullYear());
+</pre> Output: Day: 8 Month: 3 Year: 2018
+            <br> Date object API:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a>
+            <li>Regular Expression</li>
+            <ul>
+                <li>Regular Expression Object Constructor - var regularExpression = new RegExp('[,.]', 'g')</li>
+                <li>Regular Expression literal syntax - var regLiteral = /[/ :]/g</li>
+            </ul>
+            Javascript File:
+            <pre>
+        var regularExpression = new RegExp(/[/ :]/g); 
+        console.log('4/9/2018 5:00'.split(regularExpression));
+</pre> Output: ["4", "9", "2018", "5", "00"]
+            <br> Regular Expression object API:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a>
+
+            <li>Mathematical functions and constants (Math Object)</li>
+            Javascript File:
+            <pre>
+    console.log("Square Root of 4: "+Math.sqrt(4));
+    console.log("Pi: "+ Math.PI);
+    console.log("Random Numbers: "+ Math.random());
+</pre> Output:
+            <br> Square Root of 4: 2
+            <br> VM243:2 Pi: 3.141592653589793
+            <br> VM243:3 Random Numbers: 0.10229893392456502
+            <br> Math Object API:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math</a>
         </ul>
-        <li>Selector group</li>
-    </ul>
-   
+
+        <li>Functions</li>
+
+        <ul>
+            <li>Default Paramenter Values</li>
+            Javascript File:
+            <pre>
+    function f2(a = 1, b){
+        console.log(`a = ${a}, b = ${b}`);
+    }
+</pre>
+            <li>Function Expression</li>
+            Javascript File:
+            <pre>
+    function add(n1, n2){
+        return n1 + n2;
+    }
+    
+    console.log(add(5, 15));
+    console.log(add('5','15'));
+    </pre> Output: 20, 515
+            <li>Rest Parameter</li>
+            Javascript File:
+            <pre>
+    function f3(n1, n2, ...n3) {
+        console.log(n1);
+        console.log(n2);
+        console.log(n3);
+    }
+
+    console.log(f3(1,2,3,4,5));
+</pre> Output: 1 2 [3, 4, 5]
+            <li>Arrow Function</li>
+            Javascript File:
+            <pre>
+    var add = (n1,n2) => {
+        return n1 + n2;
+    }
+    console.log(add(1,2));
+</pre> Output: 3
+            <li>Can be passed as arguments to functions</li>
+            Javascript File:
+            <pre>
+    function add(n1, n2){
+        return n1 + n2;
+    }
+    function f4(func, n1, n2){
+        return func(n1, n2);
+    }
+
+    console.log(f4(add, 2, 2));
+</pre> Output: 4
+            <li>Nested Functions</li>
+        </ul>
+        <li>Arrays</li>
+        <ul>
+            <li>Array Object Constructor - var laptop = new Array(2);</li>
+            <li>Empty Array - var empty = [];</li>
+            <li>Array can be also have mix data types - var mix = [true, 1, new Date(), 'hello'];</li>
+            <li>Different array methods</li>
+            <ol>
+                <li>pop()</li>
+                <ul>
+                    <li>Remove the last element in the array</li>
+                </ul>
+                Javascript File:
+                <pre>
+    var pop = [1,2,3,4];
+    console.log("Remove number: "+pop.pop());
+</pre> Output: Remove number: 4
+                <li>push()</li>
+                <ul>
+                    <li>Add a new element at the end of an array</li>
+                </ul>
+                Javascript File:
+                <pre>
+    var push = [1,2,3];
+    push.push(4);
+    console.log(push);
+</pre> Output: [1,2,3,4];
+                <li>shift()</li>
+                <ul>
+                    <li>Removes the first element in the array and moves all other elemnts to the lower index</li>
+                </ul>
+                Javascript File:
+                <pre>
+    var shift = [1,2,3,4];
+    console.log("Remove number: "+shift.shift());
+</pre> Output: Remove number: 1
+                <li>concat()</li>
+                <ul>
+                    <li>Creates a new array by merging existing arrays</li>
+                </ul>
+                Javascript File:
+                <pre>
+    var array1 = ["1", "2"];
+    var array2 = ["3", 4];
+    var array3 = array1.concat(array2);
+    console.log(array3)
+</pre> Output: ["1", "2", "3", 4]
+                <br> Array object API:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+            </ol>
+            <li>User-defined Object</li>
+        </ul>
+        <li>User-Defined Object</li>
+        <ul>
+            <li>Object constructor - var subject = new Object();</li>
+            <li>Defining properties and methods - subject.name = 'Webtech'</li>
+            <li>Accessing properties and methods - subject['name'] or subject.name</li>
+            <li>Property Enumeration</li>
+            Javascript File:
+            <pre>
+    for (let property in subject){
+        console.log(`${property} = ${subject[property]}`);
+    }
+</pre> Output: name = Webtech
+            <li>Object literation syntax</li>
+            Javascript File:
+            <ol>
+                <li>
+                    <pre>
+var studentInfo = {};
+studentInfo.name = "John Patrick D. Sese";
+studentInfo.age = "18";
+studentInfo.course = "BSIT"
+studentInfo.year = 3
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+var studentInfo = {
+    name: "John Patrick D. Sese",
+    age: "18",
+    course: "BSIT",
+    year: 3
+}
+                    </pre>
+                </li>
+            </ol>
+            <li>Object Constructor Function</li>
+            Javascript File:
+            <pre>
+    function studentInfo(name, age, course, year){
+        this.name = name;
+        this.age = age;
+        this.course = course;
+        this.year = year;
+    }
+    studentInfo.toString = function(){
+        return `${this.name} ${this.age} ${this.course} ${this.year}`;
+    }
+</pre>
+            <li>JSON object</li>
+            Javascript File:
+            <pre>
+    date = {
+        day: '8',
+        month: '4',
+        year: '2018'
+    }
+    localStorage.setItem('date', JSON.stringify(date)); 
+    storedDate = JSON.parse(localStorage.getItem('date'));
+</pre> Object API:
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a>
+            <br> JSON object API:
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON</a>
+
+            <li>Miscellaneous Object</li>
+            <ol>
+                <li>Maps</li>
+                Javascript File:
+                <pre>
+    var num = new Map();
+    num.set(0, 'zero');
+    num.set(1, 'one');
+    num.set(2, 'two');
+    console.log(num.size);
+    console.log(num.get(1));
+    console.log(num.entries());
+    console.log(num.keys());
+    console.log(num.values());
+</pre> Output:
+                <br> 3
+                <br> one
+                <br> MapIterator {0 => "zero", 1 => "one", 2 => "two"}
+                <br> MapIterator {0, 1, 2}
+                <br> MapIterator {"zero", "one", "two"}
+                <br> Map Object API:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map</a>
+                <li>Sets</li>
+                Javascript File:
+                <pre>
+    var num = new Set();
+    num.add(1);
+    num.add(2);
+    num.add(5);
+    num.add('hello');
+    console.log(num.has(1));
+    console.log(num.has('hi'));
+    num.delete(5); //Remove number 5 from the set
+</pre> Output: true, false Set API:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set</a>
+            </ol>
+
+        </ul>
+    </ol>
+
 </body>
 
 </html>
