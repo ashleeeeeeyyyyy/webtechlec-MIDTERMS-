@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Handling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/styles3.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+</head>
+
+<body>
+
+<h1>Event Propagation Order (DOM-compliant website)</h1>
+    <ul>
+        <li> Capturing phase</li>
+            <ol>
+                <li> The event goes down to the element.</li>
+            </ol>
+        <li> Target phase</li>
+            <ol>
+                <li> The event reached the targetted element</li>
+            </ol>
+        <li> Bubbling phase</li>
+            <ol>
+                <li> The event bubbles up from the element.</li>
+            </ol>
+    </ul>
+<h1>Event Object Properties and Methods</h1>
+    <ul>
+        <li> bubble </li>
+        <li> eventPhase </li>
+        <li> target </li>
+        <li> currentTarget </li>
+        <li> preventDefault()</li>
+        <li> stopPropagation()</li>
+        <li> stopImmediatePropagation()</li>
+    </ul>
+</body>
+</html>
