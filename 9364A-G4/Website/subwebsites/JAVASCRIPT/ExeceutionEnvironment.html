@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client-Side JavaScript Execution Environment</title>
+</head>
+
+<body>
+    <div class="well">
+        <ul>
+            <h1>Client-Side JavaScript Execution Environment</h1>
+            <li>Core JavaScript(EcmaScript)Language and API</li>
+            <li>Traditional) Browser Object Model (BOM) API (non-standardized)</li>
+            <ul>
+                <li>Window, Navigator, Screen, Location, History, etc.</li>
+            </ul>
+            <li>Document Object Model (DOM) API</li>
+            <ul>
+                <li>DOM API Interfaces</li>
+                <ul>
+                    <li>Node, Document, Element, Text,Attr,DocumentType,Comment,etc. </li>
+                    <li>Event,EventTarget,EventListener,etc.</li>
+                    <li>CSSSTyleSheet,CSSRule,etc.</li>
+                </ul>
+            </ul>
+        </ul>
+        <h1>Document Object Model(DOM)</h1>
+        <ul>
+            <li>API that allows access to the HTML document from within scripts associated with the web page</li>
+            <li>a parsed HTML document is represented by a 'DOM tree', which contains 'nodes' representing elements, element attributes, textual content, and other HTML document components (e.g., DOCTYPE, comments, etc.)</li>
+            <li>the API is accessed via the 'Document' object property of the global 'Window' object
+            </li>
+        </ul>
+        <h2>DOM API Functionalities</h2>
+        <ul>
+            <li>retrieve references to nodes(or node collection in the DOM:</li>
+            <ul>
+                <li>getElementById()</li>
+                <li>getElementsByTagName()</li>
+                <li>getElementsbyClassName()</li>
+                <li>getElementsByName()</li>
+                <ul>
+                    <li>querySelector(),querySelectorAll()</li>
+                </ul>
+            </ul>
+            <li>traverse the DOM tree(from given node):</li>
+            <ul>
+                <li>parentNode,parentElement</li>
+                <li>childNodes,children</li>
+                <li>firstChild, lastChild, nextSibling, previousSibling</li>
+                <li>firstElementChild, X</li>
+            </ul>
+            <li>Construct/copy nodes</li>
+            <ul>
+                <li>createElement(), createTextNode(), createAttribute(), etc.</li>
+                <li>cloneNode(), importNode()</li>
+            </ul>
+            <li>manipulate the DOM tree:</li>
+            <ul>
+                <li>appendChild(), insertBefore(), replaceChild(), removeChild()</li>
+                <li>adoptNode()</li>
+            </ul>
+            <li>manipulate attributes(for 'Element' nodes)</li>
+            <ul>
+                <li>setAttribute(), getAttribute(), removeAttribute()</li>
+                <li>setAttributeNode(), getAttributeNode(), removeAttributeNode()</li>
+            </ul>
+            <li>event handling</li>
+            <ul>addEventListener(), removeEventListener(), dispatchEvent()</ul>
+            <li>Style Handling</li>
+            <ul>
+                <li>StyleSheets, ownerRule, cssRules, insertRule(), deleteRule()</li>
+                <li>getComputedStyle()</li>
+            </ul>
+            
+        </ul>
+        <p>although technically not defined as part of the DOM, browsers 
+              typically support other properties and methods that can be used to<br>
+              interact with the DOM tree:
+                - innerHTML, outerHTML, innerText, outerText</p><br>
+                <p>- references to oft-used document sections and collections:<br>
+                    - head, body, anchors, forms, images</p>
+    </div>
+
+</body>
+</html>
