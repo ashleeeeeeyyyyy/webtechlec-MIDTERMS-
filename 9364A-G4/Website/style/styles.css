@@ -4,12 +4,16 @@
 }
 
 #main{
-    height: 100%;
+    height: inherit;
     width: 100%;
     position: relative;
     object-position: center;
 }
-
+.hover{
+    background-color: black;
+    opacity: 0.6;
+    z-index: -1;
+}
 body {
     background-image: url("../images/image.jpg");
     background-size: cover;
