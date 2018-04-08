@@ -3,7 +3,8 @@
     padding: 0;
 }
 
-.video-background {
+body{
+    background-image: url(../images/wallpaper.jpg);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -14,19 +15,7 @@
     z-index: -100%;
 }
 
-@media(min-aspect-ratio:16/9) {
-    .video-background {
-        width: 100%;
-        height: auto;
-    }
-}
 
-@media(max-aspect-ratio:16/9) {
-    .video-background {
-        width: auto;
-        height: 100%;
-    }
-}
 
 .header {
     background: rgba(0, 0, 999, 0);

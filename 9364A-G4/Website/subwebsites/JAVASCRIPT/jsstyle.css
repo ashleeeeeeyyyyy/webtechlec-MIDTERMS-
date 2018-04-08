@@ -1,0 +1,41 @@
+#box1 {
+   height: 50vh;
+    width: 100%;
+    background-color:#25549e;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: azure;
+    filter: blur(75%);
+}
+#box2 {
+    background-color: #133f1b;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: azure;
+    height: 50vh;
+    width: 100%;
+}
+#box3 {
+   background-color: #c3d646;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: black;
+    height:90vh;
+    width: 100%;
+}
+#box4 {
+   background-color: black;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    color: white;
+    height:20vh;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    
+}
