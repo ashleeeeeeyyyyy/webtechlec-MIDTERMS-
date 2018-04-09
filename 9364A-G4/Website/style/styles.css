@@ -1,6 +1,10 @@
 * {
     margin: 0px;
 }
+@font-face{
+    font-family: font1;
+    src: url(../fonts/Walkway_SemiBold.ttf);
+}
 
 img {
     border: solid;
@@ -10,21 +14,28 @@ img {
     border-color: black;
 }
 
+#image {
+    border: none;
+}
+
 #main {
     height: inherit;
     width: 100%;
     position: relative;
     object-position: center;
+    font-family: font1;
 }
 
 #content {
     color: beige;
+    font-family: font1;
 }
 
 .hover {
     background-color: black;
     opacity: 0.6;
     z-index: -1;
+    font-family: font1;
 }
 
 body {
@@ -32,6 +43,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: font1;
 }
 
 /** Navigation Bar **/
@@ -43,6 +55,7 @@ body {
     font-family: sans-serif; 
     font-size: 18px;
     letter-spacing: 1px;
+    font-family: font1;
   }
 
 nav.hover ul li a:after {
@@ -55,10 +68,12 @@ nav.hover ul li a:after {
   color: transparent;
   background: coral;
   height: 2px;
+    font-family: font1;
 }
 
 nav.hover ul li a:hover:after {
   width: 100%;
+    
 }
 
 /** Footer **/
@@ -99,45 +114,53 @@ pre {
 
 h1 {
     color:  black;
+    font-family: font1;
 }
 
 h2 {
+    font-family: font1;
     
 }
 
 ul p {
+    font-family: font1;
     
 }
 
 ul li {
+    font-family: font1;
     
 }
 
 
 ul ol li {
+    font-family: font1;
     
 }
 
 ul ol ul {
+    font-family: font1;
     
 } 
 
 ul ol ul li {
+    font-family: font1;
     
 }
 
 ul ol ul p {
+    font-family: font1;
     
 }
 
 ul ul li {
-    
+    font-family: font1;
 }
 
 ul ul ul li {
-    
+    font-family: font1;
 }
 
 ul ul ul ol li {
-    
+    font-family: font1;
 }

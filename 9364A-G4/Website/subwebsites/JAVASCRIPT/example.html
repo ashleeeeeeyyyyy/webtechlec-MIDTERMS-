@@ -3,351 +3,429 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example</title>
-    <link rel="stylesheet" href="../../style/styles3.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../style/styles.css">
+    <title> JavaScript Fundamentals</title>
 </head>
 
 <body>
-    <!-- JAVASCRIPT -->
-    <h1>Javascript</h1>
-
-    <!-- Example Codes -->
-    <h3>Variables and Constances</h3>
-    <ul>
-        <li>var</li>
-        <li>let</li>
-        <li>const</li>
-    </ul>
-
-    <h3>Primitive Data Types</h3>
-    <ol>
-        <li>Numbers</li>
-        <ul>
-            <li>Decimal Notation</li>
-            <ul>
-                <li>Decimal Integer - var decimalInteger = 10;</li>
-                <li>Decimal Float - var decimalFloat = 0.10;</li>
-                <li>Scientific Notation - var scientificNotation = 10.033e21;</li>
-            </ul>
-            <li>Numbers in base 2(binary), base 8(octal) and base 16(hexadecimal)</li>
-            <ul>
-                <li>Binary - var binaryNo = 0b1101;</li>
-                <ul>
-                    <li>Output: 13</li>
+    <nav class = "hover">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../../index.html">HOME</a></li>
+                    <li><a href="../../subwebsites/JAVASCRIPT/EventHandler.html">Event Handling</a></li>
+                    <li><a href="../../subwebsites/JAVASCRIPT/example.html">JavaScript Fundamentals</a></li>
+                    <li> <a href="../../subwebsites/JAVASCRIPT/ExeceutionEnvironment.html">Execution Environment</a></li>
                 </ul>
-                <li>Octal - var octalNo = 0o456;</li>
-                <ul>
-                    <li>Output: 302</li>
-                </ul>
-                <li>Hexadecimal - var hexadecimalNo = 0xABC;</li>
-                <ul>
-                    <li>Output: 2748</li>
-                </ul>
-            </ul>
-            <li>Special Numbers</li>
-            <ul>
-                <li>Positive Infinity - var positiveInfinity = 10/0; or any number that exceed the highest positive integer</li>
-                <ul>
-                    <li>Output: Infinity</li>
-                </ul>
-                <li>Negative Infinity - var negativeInfinity = -10/0; or any number that exceed the lowest negative integer</li>
-                <ul>
-                    <li>Output: -Infinity</li>
-                </ul>
-                <li>Not a number or NaN - var notANumber = 0/0;</li>
-                <ul>
-                    <li>Output: NaN</li>
-                </ul>
-            </ul>
-            <li>Strings</li>
-            <ul>
-                <li>Single-quote delimited - var singleQuote = 'Webtech 2018';</li>
-                <ul>
-                    <li>Output: Webtech 2018</li>
-                </ul>
-                <li>Double-quote delimited - var doubleQuote = "2nd Semester";</li>
-                <ul>
-                    <li>Output: 2nd Semester</li>
-                </ul>
-                <li>Template literals - var combinedString = `${singleQuote} ${dept} Saint Louis University`;</li>
-                <ul>
-                    <li>Output: "Webtech 2018 IT/CS Saint Louis University"</li>
-                </ul>
-            </ul>
-            <li>Boolean</li>
-            <ul>
-                <li>These are the false values: 0, '', false, null, undefined and NaN</li>
-                Javascript File:
-                <pre>
-        if (0 || '' || null || false || undefined || NaN) {
-            console.log(true);
-        } else {
-            console.log(false);
-        }
-</pre> Output: False
-            </ul>
-        </ul>
-        <li>Object Types</li>
-        <ul>
-            <li>Primitive Types (String, Number, Boolean)</li>
-            <ul>
-                <li>String - var primString = new String('Hello World');</li>
-                <li>Number - var primNumber = new Number(50);</li>
-                <li>Boolean - var primBoolean = new Boolean(true);</li>
-            </ul>
-            Javascript File:
-            <pre>
-        var a = 1, b = new Number(5);
-        console.log("a = "+typeof a);
-        console.log("b = "+typeof b);
-</pre> Output: a = number, b = object
-            <li>Date Object (dates and times)</li>
-            <ul>
-                <li>Current date and time - var currentDate = new Date()</li>
-                <li>April 9, 2018, 12:00 MN - var passingDate = new Date(2018, 3, 9)</li>
-            </ul>
-            Javascript File:
-            <pre>
-    var currentDate = new Date();
-    console.log("Day: "+currentDate.getDate() + " Month: "+ currentDate.getMonth() + " Year: "+currentDate.getUTCFullYear());
-</pre> Output: Day: 8 Month: 3 Year: 2018
-            <br> Date object API:
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a>
-            <li>Regular Expression</li>
-            <ul>
-                <li>Regular Expression Object Constructor - var regularExpression = new RegExp('[,.]', 'g')</li>
-                <li>Regular Expression literal syntax - var regLiteral = /[/ :]/g</li>
-            </ul>
-            Javascript File:
-            <pre>
-        var regularExpression = new RegExp(/[/ :]/g); 
-        console.log('4/9/2018 5:00'.split(regularExpression));
-</pre> Output: ["4", "9", "2018", "5", "00"]
-            <br> Regular Expression object API:
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a>
-
-            <li>Mathematical functions and constants (Math Object)</li>
-            Javascript File:
-            <pre>
-    console.log("Square Root of 4: "+Math.sqrt(4));
-    console.log("Pi: "+ Math.PI);
-    console.log("Random Numbers: "+ Math.random());
-</pre> Output:
-            <br> Square Root of 4: 2
-            <br> VM243:2 Pi: 3.141592653589793
-            <br> VM243:3 Random Numbers: 0.10229893392456502
-            <br> Math Object API:
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math</a>
-        </ul>
-
-        <li>Functions</li>
-
-        <ul>
-            <li>Default Paramenter Values</li>
-            Javascript File:
-            <pre>
-    function f2(a = 1, b){
-        console.log(`a = ${a}, b = ${b}`);
-    }
-</pre>
-            <li>Function Expression</li>
-            Javascript File:
-            <pre>
-    function add(n1, n2){
-        return n1 + n2;
-    }
+            </div>
+        </nav>
     
-    console.log(add(5, 15));
-    console.log(add('5','15'));
-    </pre> Output: 20, 515
-            <li>Rest Parameter</li>
-            Javascript File:
-            <pre>
-    function f3(n1, n2, ...n3) {
-        console.log(n1);
-        console.log(n2);
-        console.log(n3);
-    }
+         <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content1" style="width:100%; margin-top:10%; font-size:30px;"> JavaScript </button>
+                    <div class="collapse" id="content1">
+                        <div class="well">
+                              <div class="row">
+                                <div>
+                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content2" style="width:100%; margin-top:10px; font-size 30px;"> Variables and Constances </button>
+                                    <div class="collapse" id="content2">
+                                        <div class="well">
+                                             <ul>
+                                                <li>var</li>
+                                                <li>let</li>
+                                                <li>const</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div>
+                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content3" style="width:100%; margin-top:10px; font-size 30px;"> Primitive Data Types </button>
+                                    <div class="collapse" id="content3">
+                                        <div class="well">
+                                            <div class="row">
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content4" style="width:100%; margin-top:10px; font-size 30px;"> Numbers </button>
+                                                    <div class="collapse" id="content4">
+                                                        <div class="well">
+                                                             <ul>
+                                                                <li>Decimal Notation</li>
+                                                                <ul>
+                                                                    <li>Decimal Integer - var decimalInteger = 10;</li>
+                                                                    <li>Decimal Float - var decimalFloat = 0.10;</li>
+                                                                    <li>Scientific Notation - var scientificNotation = 10.033e21;</li>
+                                                                </ul>
+                                                                <li>Numbers in base 2(binary), base 8(octal) and base 16(hexadecimal)</li>
+                                                                <ul>
+                                                                    <li>Binary - var binaryNo = 0b1101;</li>
+                                                                    <ul>
+                                                                        <li>Output: 13</li>
+                                                                    </ul>
+                                                                    <li>Octal - var octalNo = 0o456;</li>
+                                                                    <ul>
+                                                                        <li>Output: 302</li>
+                                                                    </ul>
+                                                                    <li>Hexadecimal - var hexadecimalNo = 0xABC;</li>
+                                                                    <ul>
+                                                                        <li>Output: 2748</li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <li>Special Numbers</li>
+                                                                <ul>
+                                                                    <li>Positive Infinity - var positiveInfinity = 10/0; or any number that exceed the highest positive integer</li>
+                                                                    <ul>
+                                                                        <li>Output: Infinity</li>
+                                                                    </ul>
+                                                                    <li>Negative Infinity - var negativeInfinity = -10/0; or any number that exceed the lowest negative integer</li>
+                                                                    <ul>
+                                                                        <li>Output: -Infinity</li>
+                                                                    </ul>
+                                                                    <li>Not a number or NaN - var notANumber = 0/0;</li>
+                                                                    <ul>
+                                                                        <li>Output: NaN</li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <li>Strings</li>
+                                                                <ul>
+                                                                    <li>Single-quote delimited - var singleQuote = 'Webtech 2018';</li>
+                                                                    <ul>
+                                                                        <li>Output: Webtech 2018</li>
+                                                                    </ul>
+                                                                    <li>Double-quote delimited - var doubleQuote = "2nd Semester";</li>
+                                                                    <ul>
+                                                                        <li>Output: 2nd Semester</li>
+                                                                    </ul>
+                                                                    <li>Template literals - var combinedString = `${singleQuote} ${dept} Saint Louis University`;</li>
+                                                                    <ul>
+                                                                        <li>Output: "Webtech 2018 IT/CS Saint Louis University"</li>
+                                                                    </ul>
+                                                                </ul>
+                                                                <li>Boolean</li>
+                                                                <ul>
+                                                                    <li>These are the false values: 0, '', false, null, undefined and NaN</li>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                            if (0 || '' || null || false || undefined || NaN) {
+                                                                console.log(true);
+                                                            } else {
+                                                                console.log(false);
+                                                            }
+                                                            </pre> Output: False
+                                                                </ul>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content5" style="width:100%; margin-top:10px; font-size 30px;"> Object Types </button>
+                                                    <div class="collapse" id="content5">
+                                                        <div class="well">
+                                                             <ul>
+                                                                <li>Primitive Types (String, Number, Boolean)</li>
+                                                                <ul>
+                                                                    <li>String - var primString = new String('Hello World');</li>
+                                                                    <li>Number - var primNumber = new Number(50);</li>
+                                                                    <li>Boolean - var primBoolean = new Boolean(true);</li>
+                                                                </ul>
+                                                                Javascript File:
+                                                                <pre>
+                                                            var a = 1, b = new Number(5);
+                                                            console.log("a = "+typeof a);
+                                                            console.log("b = "+typeof b);
+                                                    </pre> Output: a = number, b = object
+                                                                <li>Date Object (dates and times)</li>
+                                                                <ul>
+                                                                    <li>Current date and time - var currentDate = new Date()</li>
+                                                                    <li>April 9, 2018, 12:00 MN - var passingDate = new Date(2018, 3, 9)</li>
+                                                                </ul>
+                                                                Javascript File:
+                                                                <pre>
+                                                        var currentDate = new Date();
+                                                        console.log("Day: "+currentDate.getDate() + " Month: "+ currentDate.getMonth() + " Year: "+currentDate.getUTCFullYear());
+                                                    </pre> Output: Day: 8 Month: 3 Year: 2018
+                                                                <br> Date object API:
+                                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date</a>
+                                                                <li>Regular Expression</li>
+                                                                <ul>
+                                                                    <li>Regular Expression Object Constructor - var regularExpression = new RegExp('[,.]', 'g')</li>
+                                                                    <li>Regular Expression literal syntax - var regLiteral = /[/ :]/g</li>
+                                                                </ul>
+                                                                Javascript File:
+                                                                <pre>
+                                                            var regularExpression = new RegExp(/[/ :]/g); 
+                                                            console.log('4/9/2018 5:00'.split(regularExpression));
+                                                    </pre> Output: ["4", "9", "2018", "5", "00"]
+                                                                <br> Regular Expression object API:
+                                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a>
 
-    console.log(f3(1,2,3,4,5));
-</pre> Output: 1 2 [3, 4, 5]
-            <li>Arrow Function</li>
-            Javascript File:
-            <pre>
-    var add = (n1,n2) => {
-        return n1 + n2;
-    }
-    console.log(add(1,2));
-</pre> Output: 3
-            <li>Can be passed as arguments to functions</li>
-            Javascript File:
-            <pre>
-    function add(n1, n2){
-        return n1 + n2;
-    }
-    function f4(func, n1, n2){
-        return func(n1, n2);
-    }
+                                                                <li>Mathematical functions and constants (Math Object)</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        console.log("Square Root of 4: "+Math.sqrt(4));
+                                                        console.log("Pi: "+ Math.PI);
+                                                        console.log("Random Numbers: "+ Math.random());
+                                                    </pre> Output:
+                                                                <br> Square Root of 4: 2
+                                                                <br> VM243:2 Pi: 3.141592653589793
+                                                                <br> VM243:3 Random Numbers: 0.10229893392456502
+                                                                <br> Math Object API:
+                                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math</a>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content6" style="width:100%; margin-top:10px; font-size 30px;"> Functions </button>
+                                                    <div class="collapse" id="content6">
+                                                        <div class="well">
+                                                             <ul>
+                                                                <li>Default Paramenter Values</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        function f2(a = 1, b){
+                                                            console.log(`a = ${a}, b = ${b}`);
+                                                        }
+                                                    </pre>
+                                                                <li>Function Expression</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        function add(n1, n2){
+                                                            return n1 + n2;
+                                                        }
 
-    console.log(f4(add, 2, 2));
-</pre> Output: 4
-            <li>Nested Functions</li>
-        </ul>
-        <li>Arrays</li>
-        <ul>
-            <li>Array Object Constructor - var laptop = new Array(2);</li>
-            <li>Empty Array - var empty = [];</li>
-            <li>Array can be also have mix data types - var mix = [true, 1, new Date(), 'hello'];</li>
-            <li>Different array methods</li>
-            <ol>
-                <li>pop()</li>
-                <ul>
-                    <li>Remove the last element in the array</li>
-                </ul>
-                Javascript File:
-                <pre>
-    var pop = [1,2,3,4];
-    console.log("Remove number: "+pop.pop());
-</pre> Output: Remove number: 4
-                <li>push()</li>
-                <ul>
-                    <li>Add a new element at the end of an array</li>
-                </ul>
-                Javascript File:
-                <pre>
-    var push = [1,2,3];
-    push.push(4);
-    console.log(push);
-</pre> Output: [1,2,3,4];
-                <li>shift()</li>
-                <ul>
-                    <li>Removes the first element in the array and moves all other elemnts to the lower index</li>
-                </ul>
-                Javascript File:
-                <pre>
-    var shift = [1,2,3,4];
-    console.log("Remove number: "+shift.shift());
-</pre> Output: Remove number: 1
-                <li>concat()</li>
-                <ul>
-                    <li>Creates a new array by merging existing arrays</li>
-                </ul>
-                Javascript File:
-                <pre>
-    var array1 = ["1", "2"];
-    var array2 = ["3", 4];
-    var array3 = array1.concat(array2);
-    console.log(array3)
-</pre> Output: ["1", "2", "3", 4]
-                <br> Array object API:
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
-            </ol>
-            <li>User-defined Object</li>
-        </ul>
-        <li>User-Defined Object</li>
-        <ul>
-            <li>Object constructor - var subject = new Object();</li>
-            <li>Defining properties and methods - subject.name = 'Webtech'</li>
-            <li>Accessing properties and methods - subject['name'] or subject.name</li>
-            <li>Property Enumeration</li>
-            Javascript File:
-            <pre>
-    for (let property in subject){
-        console.log(`${property} = ${subject[property]}`);
-    }
-</pre> Output: name = Webtech
-            <li>Object literation syntax</li>
-            Javascript File:
-            <ol>
-                <li>
-                    <pre>
-var studentInfo = {};
-studentInfo.name = "John Patrick D. Sese";
-studentInfo.age = "18";
-studentInfo.course = "BSIT"
-studentInfo.year = 3
-                    </pre>
-                </li>
-                <li>
-                    <pre>
-var studentInfo = {
-    name: "John Patrick D. Sese",
-    age: "18",
-    course: "BSIT",
-    year: 3
-}
-                    </pre>
-                </li>
-            </ol>
-            <li>Object Constructor Function</li>
-            Javascript File:
-            <pre>
-    function studentInfo(name, age, course, year){
-        this.name = name;
-        this.age = age;
-        this.course = course;
-        this.year = year;
-    }
-    studentInfo.toString = function(){
-        return `${this.name} ${this.age} ${this.course} ${this.year}`;
-    }
-</pre>
-            <li>JSON object</li>
-            Javascript File:
-            <pre>
-    date = {
-        day: '8',
-        month: '4',
-        year: '2018'
-    }
-    localStorage.setItem('date', JSON.stringify(date)); 
-    storedDate = JSON.parse(localStorage.getItem('date'));
-</pre> Object API:
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a>
-            <br> JSON object API:
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON</a>
+                                                        console.log(add(5, 15));
+                                                        console.log(add('5','15'));
+                                                        </pre> Output: 20, 515
+                                                                <li>Rest Parameter</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        function f3(n1, n2, ...n3) {
+                                                            console.log(n1);
+                                                            console.log(n2);
+                                                            console.log(n3);
+                                                        }
 
-            <li>Miscellaneous Object</li>
-            <ol>
-                <li>Maps</li>
-                Javascript File:
-                <pre>
-    var num = new Map();
-    num.set(0, 'zero');
-    num.set(1, 'one');
-    num.set(2, 'two');
-    console.log(num.size);
-    console.log(num.get(1));
-    console.log(num.entries());
-    console.log(num.keys());
-    console.log(num.values());
-</pre> Output:
-                <br> 3
-                <br> one
-                <br> MapIterator {0 => "zero", 1 => "one", 2 => "two"}
-                <br> MapIterator {0, 1, 2}
-                <br> MapIterator {"zero", "one", "two"}
-                <br> Map Object API:
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map</a>
-                <li>Sets</li>
-                Javascript File:
-                <pre>
-    var num = new Set();
-    num.add(1);
-    num.add(2);
-    num.add(5);
-    num.add('hello');
-    console.log(num.has(1));
-    console.log(num.has('hi'));
-    num.delete(5); //Remove number 5 from the set
-</pre> Output: true, false Set API:
-                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set</a>
-            </ol>
+                                                        console.log(f3(1,2,3,4,5));
+                                                    </pre> Output: 1 2 [3, 4, 5]
+                                                                <li>Arrow Function</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        var add = (n1,n2) => {
+                                                            return n1 + n2;
+                                                        }
+                                                        console.log(add(1,2));
+                                                    </pre> Output: 3
+                                                                <li>Can be passed as arguments to functions</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        function add(n1, n2){
+                                                            return n1 + n2;
+                                                        }
+                                                        function f4(func, n1, n2){
+                                                            return func(n1, n2);
+                                                        }
 
-        </ul>
-    </ol>
+                                                        console.log(f4(add, 2, 2));
+                                                    </pre> Output: 4
+                                                                <li>Nested Functions</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content7" style="width:100%; margin-top:10px; font-size 30px;"> Arrays </button>
+                                                    <div class="collapse" id="content7">
+                                                        <div class="well">
+                                                             <ul>
+                                                                <li>Array Object Constructor - var laptop = new Array(2);</li>
+                                                                <li>Empty Array - var empty = [];</li>
+                                                                <li>Array can be also have mix data types - var mix = [true, 1, new Date(), 'hello'];</li>
+                                                                <li>Different array methods</li>
+                                                                <ol>
+                                                                    <li>pop()</li>
+                                                                    <ul>
+                                                                        <li>Remove the last element in the array</li>
+                                                                    </ul>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var pop = [1,2,3,4];
+                                                        console.log("Remove number: "+pop.pop());
+                                                    </pre> Output: Remove number: 4
+                                                                    <li>push()</li>
+                                                                    <ul>
+                                                                        <li>Add a new element at the end of an array</li>
+                                                                    </ul>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var push = [1,2,3];
+                                                        push.push(4);
+                                                        console.log(push);
+                                                    </pre> Output: [1,2,3,4];
+                                                                    <li>shift()</li>
+                                                                    <ul>
+                                                                        <li>Removes the first element in the array and moves all other elemnts to the lower index</li>
+                                                                    </ul>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var shift = [1,2,3,4];
+                                                        console.log("Remove number: "+shift.shift());
+                                                    </pre> Output: Remove number: 1
+                                                                    <li>concat()</li>
+                                                                    <ul>
+                                                                        <li>Creates a new array by merging existing arrays</li>
+                                                                    </ul>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var array1 = ["1", "2"];
+                                                        var array2 = ["3", 4];
+                                                        var array3 = array1.concat(array2);
+                                                        console.log(array3)
+                                                    </pre> Output: ["1", "2", "3", 4]
+                                                                    <br> Array object API:
+                                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a>
+                                                                </ol>
+                                                                <li>User-defined Object</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div>
+                                                    <button type="button" class="btn btn-warning btn-lg btn-block" data-toggle="collapse" data-target="#content8" style="width:100%; margin-top:10px; font-size 30px;"> Variables and Constances </button>
+                                                    <div class="collapse" id="content8">
+                                                        <div class="well">
+                                                             <ul>
+                                                                <li>Object constructor - var subject = new Object();</li>
+                                                                <li>Defining properties and methods - subject.name = 'Webtech'</li>
+                                                                <li>Accessing properties and methods - subject['name'] or subject.name</li>
+                                                                <li>Property Enumeration</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        for (let property in subject){
+                                                            console.log(`${property} = ${subject[property]}`);
+                                                        }
+                                                    </pre> Output: name = Webtech
+                                                                <li>Object literation syntax</li>
+                                                                Javascript File:
+                                                                <ol>
+                                                                    <li>
+                                                                        <pre>
+                                                    var studentInfo = {};
+                                                    studentInfo.name = "John Patrick D. Sese";
+                                                    studentInfo.age = "18";
+                                                    studentInfo.course = "BSIT"
+                                                    studentInfo.year = 3
+                                                                        </pre>
+                                                                    </li>
+                                                                    <li>
+                                                                        <pre>
+                                                    var studentInfo = {
+                                                        name: "John Patrick D. Sese",
+                                                        age: "18",
+                                                        course: "BSIT",
+                                                        year: 3
+                                                    }
+                                                                        </pre>
+                                                                    </li>
+                                                                </ol>
+                                                                <li>Object Constructor Function</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        function studentInfo(name, age, course, year){
+                                                            this.name = name;
+                                                            this.age = age;
+                                                            this.course = course;
+                                                            this.year = year;
+                                                        }
+                                                        studentInfo.toString = function(){
+                                                            return `${this.name} ${this.age} ${this.course} ${this.year}`;
+                                                        }
+                                                    </pre>
+                                                                <li>JSON object</li>
+                                                                Javascript File:
+                                                                <pre>
+                                                        date = {
+                                                            day: '8',
+                                                            month: '4',
+                                                            year: '2018'
+                                                        }
+                                                        localStorage.setItem('date', JSON.stringify(date)); 
+                                                        storedDate = JSON.parse(localStorage.getItem('date'));
+                                                    </pre> Object API:
+                                                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a>
+                                                                <br> JSON object API:
+                                                                <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON</a>
+
+                                                                <li>Miscellaneous Object</li>
+                                                                <ol>
+                                                                    <li>Maps</li>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var num = new Map();
+                                                        num.set(0, 'zero');
+                                                        num.set(1, 'one');
+                                                        num.set(2, 'two');
+                                                        console.log(num.size);
+                                                        console.log(num.get(1));
+                                                        console.log(num.entries());
+                                                        console.log(num.keys());
+                                                        console.log(num.values());
+                                                    </pre> Output:
+                                                                    <br> 3
+                                                                    <br> one
+                                                                    <br> MapIterator {0 => "zero", 1 => "one", 2 => "two"}
+                                                                    <br> MapIterator {0, 1, 2}
+                                                                    <br> MapIterator {"zero", "one", "two"}
+                                                                    <br> Map Object API:
+                                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map</a>
+                                                                    <li>Sets</li>
+                                                                    Javascript File:
+                                                                    <pre>
+                                                        var num = new Set();
+                                                        num.add(1);
+                                                        num.add(2);
+                                                        num.add(5);
+                                                        num.add('hello');
+                                                        console.log(num.has(1));
+                                                        console.log(num.has('hi'));
+                                                        num.delete(5); //Remove number 5 from the set
+                                                    </pre> Output: true, false Set API:
+                                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set</a>
+                                                                </ol>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    
 
 </body>
 
