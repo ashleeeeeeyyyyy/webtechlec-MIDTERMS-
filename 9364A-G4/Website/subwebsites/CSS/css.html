@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSS</title>
+        <title>History</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../../style/styles.css">
@@ -15,27 +16,47 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../../index.html">HOME</a></li>
                     <li><a href="../CSS/history.html">HISTORY</a></li>
-                    <li><a href="../CSS/statement.html">STATEMENTS</a></li>
                     <li><a href="../CSS/selectors.html">SELECTORS</a></li>
                     <li><a href="../CSS/pseudo.html">PSEUDO</a></li>
                     <li><a href="../CSS/rules.html">RULES</a></li>
                 </ul>
             </div>
         </nav>
-
-            <h1>CSS</h1>
-            <ul>
-                <p>
-                    <li>language used to specify the presentation structural marked up documents</li>
-                </p>
-                <p>
-                    <li>developed by Hakon Wium Lie(CHSS) and Bert Bos (SSP)</li>
-                </p>
-            </ul>
-
-            <h2>Selectors group</h2>
-            <ul>
-                <li>Union of all elements and coma is used as a separator.</li>
-            </ul>     
+        
+        <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content1" style="width:100%; margin-top:10%; font-size:30px;">CSS</button>
+                    <div class="collapse" id="content1">
+                        <div class="well">
+                            <h1>CSS</h1>
+                            <ul>
+                                <p>
+                                    <li>language used to specify the presentation structural marked up documents</li>
+                                </p>
+                                <p>
+                                    <li>developed by Hakon Wium Lie(CHSS) and Bert Bos (SSP)</li>
+                                </p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+         <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content2" style="width:100%; margin-top:10px; font-size:30px;">VERSION HISTORY</button>
+                    <div class="collapse" id="content2">
+                        <div class="well">
+                            <h1>Version History</h1>
+                            <h2>Selectors group</h2>
+                            <ul>
+                                <li>Union of all elements and coma is used as a separator.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
     </body>
 </html>
