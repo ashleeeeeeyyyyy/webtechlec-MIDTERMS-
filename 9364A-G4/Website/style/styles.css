@@ -1,6 +1,13 @@
 * {
-    padding: 0px;
     margin: 0px;
+}
+
+img{
+    border: solid;
+    border-width: thick;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: black;
 }
 
 #main{
@@ -8,6 +15,9 @@
     width: 100%;
     position: relative;
     object-position: center;
+}
+#content {
+    color: beige;
 }
 .hover{
     background-color: black;
@@ -75,8 +85,13 @@ footer {
 }
 
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+    font-family: monospace, monospace;
+    font-size: 1em;
+    width: 60%;
+    border: solid;
+    border-width: thick; 
+    margin-top: 10px;
+    margin-bottom: 10px;    
 }
 
 h1 {
