@@ -4,6 +4,7 @@
         <title>Rules</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../../style/styles.css">
@@ -15,41 +16,83 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../../index.html">HOME</a></li>
                     <li><a href="../CSS/history.html">HISTORY</a></li>
-                    <li><a href="../CSS/statement.html">STATEMENTS</a></li>
                     <li><a href="../CSS/selectors.html">SELECTORS</a></li>
                     <li><a href="../CSS/pseudo.html">PSEUDO</a></li>
                     <li><a href="../CSS/rules.html">RULES</a></li>
                 </ul>
             </div>
         </nav>
-                <h2>CSS Rules</h2>
-                <ul>
-                    <li>By origin and importance</li>
-                    <li>By Specify</li>
-                    <li>By Order</li>
-                </ul>
-                <ul>
-                    <li> Regular Rules - These rules follow regular syntax</li>
-                        <ul>
-                            <li>@charset - This defines the character set which is used by the web browser. This is very useful when the stylesheet contains non-ASCII characters.</li>
-                            <li>@import - This rule is placed at the very beggining of the css file which instructs the stylesheet to include an external CSS files as if the requested file's content were right there. </li>
-                            <li>@namespace - This is used particularly for applying CSS to XHTML so that the XHTML elements can possibly be used as selectors in the actual CSS file</li>
-                    </ul>
-                    <li> Nested Rules- This contains subsets of additional statements</li>
-                        <ul>
-                            <li> @document - This is used for specific conditions of styles which apply to a specified page. (e.g. Providing a URL then customizing styles only for the specified page.)</li>
-                            <li> @font-face - This allows the user to use custom fonts for a webpage. Although some fonts may not be supported by other browsers, this rule will still accept the statements which create the custom fonts..</li> 
-                            <li> @keyframes - This rule serves as the basis for keyframe animations, which allow the web developers to mark the start and stop time for the animations. </li>
-                            <li> @media - This contains plenty of additional statements for specifying styles to a specific screen. </li>
-                            <li> @page - This defines styles used by individual pages when the document is being printed. Specifically, it contains pseudo-elements fo styling the very first page as well as the left and right margins of the page.</li>
-                            <li> @supports - This test if the browser can support a certain feature, which then applies the stle for those elements if it is supported.</li>
-                    </ul>
-                </ul>
-                <footer>
-                </footer>    
-
-                <h2>CSS declaration</h2>
-                <ul>
+        
+        
+        <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content1" style="margin: 5px; font-size 30px;"> CSS Rules</button>
+                     <div class="collapse" id="content1">
+                        <div class="well">
+                            <ul>
+                                <li>By origin and importance</li>
+                                <li>By Specify</li>
+                                <li>By Order</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content2" style="margin: 5px; font-size 30px;"> Regular Rules</button>
+                     <div class="collapse" id="content2">
+                        <div class="well">
+                            <ul>
+                                <li>These rules follow regular syntax</li>
+                                    <ul>
+                                        <li>@charset - This defines the character set which is used by the web browser. This is very useful when the stylesheet contains non-ASCII characters.</li>
+                                        <li>@import - This rule is placed at the very beggining of the css file which instructs the stylesheet to include an external CSS files as if the requested file's content were right there. </li>
+                                        <li>@namespace - This is used particularly for applying CSS to XHTML so that the XHTML elements can possibly be used as selectors in the actual CSS file</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content3" style="margin: 5px; font-size 30px;"> Nested Rules</button>
+                     <div class="collapse" id="content3">
+                        <div class="well">
+                             <ul>
+                                <li>This contains subsets of additional statements</li>
+                                    <ul>
+                                        <li> @document - This is used for specific conditions of styles which apply to a specified page. (e.g. Providing a URL then customizing styles only for the specified page.)</li>
+                                        <li> @font-face - This allows the user to use custom fonts for a webpage. Although some fonts may not be supported by other browsers, this rule will still accept the statements which create the custom fonts..</li> 
+                                        <li> @keyframes - This rule serves as the basis for keyframe animations, which allow the web developers to mark the start and stop time for the animations. </li>
+                                        <li> @media - This contains plenty of additional statements for specifying styles to a specific screen. </li>
+                                        <li> @page - This defines styles used by individual pages when the document is being printed. Specifically, it contains pseudo-elements fo styling the very first page as well as the left and right margins of the page.</li>
+                                        <li> @supports - This test if the browser can support a certain feature, which then applies the stle for those elements if it is supported.</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div>
+                    <button type="button" class="btn btn-info btn-lg btn-block" data-toggle="collapse" data-target="#content4" style="margin: 5px; font-size 30px;"> CSS Declaration</button>
+                     <div class="collapse" id="content4">
+                        <div class="well">
+                            <ul>
                     <li>Properties</li>
                     <ul>
                         <li>Shorthand properties</li>
@@ -88,7 +131,7 @@
                             }
                         </pre>
 
-                        <img src = "./images/custom.PNG">
+                        <img src = "../../images/custom.PNG">
                         <li>Values</li>
                         Reference: <a href="https://www.w3.org/TR/css-values-3/#component-types">https://www.w3.org/TR/css-values-3/#component-types</a>
                         <ul>
@@ -169,5 +212,11 @@
                         </ul>
                     </ul>
                 </ul>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
     </body>
 </html>
